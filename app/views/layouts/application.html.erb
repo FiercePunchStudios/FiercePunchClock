@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>FiercePunchClock</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -7,13 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="content">
-		<%= render 'layouts/member_widget' %>
-	
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-	
-		<%= yield %>
+	<div id="page">
+		<header>
+			<%= image_tag("fiercepunchicon_128.png", :size => '32') %>
+			<h1>Fierce Punch Clock</h1>
+			<%= render 'layouts/member_widget' %>
+		</header>
+		<main>
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+		
+			<%= yield %>
+		</main>
+		<footer>
+			<small>Fierce Punch Studios 2014.</small>
+		</footer>
 	</div>
 </body>
 </html>

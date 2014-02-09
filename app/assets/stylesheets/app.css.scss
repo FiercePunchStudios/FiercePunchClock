@@ -1,0 +1,42 @@
+@import 'constants';
+@import 'generics';
+
+body {
+	font-family:		$p_fonts;
+	background-color:	$prim_color;
+	padding:			0em;
+}
+
+h1, h2, h3, h4 {
+	font-family:	$h_fonts;
+}
+
+#page {
+	width: 60em;
+	margin: 0em auto;
+	padding: 0em;
+}
+
+header {
+	@extend .floatfix;
+	@extend .block;
+	h1 {	
+		display: inline-block;
+		margin: 0;
+		padding: 0;	
+	}
+	padding: 0em;
+	margin: $quart_size;
+}
+
+main {
+	@extend .box;
+	background-color: $reading_color;
+	margin: 0em;
+}
+
+footer {
+	@extend .block;
+	text-align: center;
+	margin: 0em;
+}
