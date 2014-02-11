@@ -1,14 +1,12 @@
 <!-- Calls magical devise method to see if someone is signed in and gives appropriate links -->
 <div class="devise">
-	<% if member_signed_in? %>
-		<p>
-			Welcome <%= current_member.email %>
-		</p>
-		<%= link_to 'Logged In [click to logout]', destroy_member_session_path, :method => :delete %>
-	<% else %>
-		<p>
-			You are not signed in.
-		</p>
-		<%= link_to 'Login', new_member_session_path %>
-	<% end %>
+	<small>
+		<% if member_signed_in? %>
+			<%= current_member.email %>, 
+			<%= link_to 'Logout', destroy_member_session_path, :method => :delete %>
+		<% else %>
+			You are not signed in. 
+			<%= link_to 'Login', new_member_session_path %>
+		<% end %>
+	</small>
 </div>

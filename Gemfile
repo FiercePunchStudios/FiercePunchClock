@@ -1,10 +1,23 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+#<<<<<<< HEAD
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+#=======
+
+#gem 'rails', '4.0.2'
+gem 'rails'
+
+# Use sqlite3 as the database for Active Record
+#gem 'sqlite3', :group => :development
+
+#gem 'mysql', :group => :production
+
+gem 'mysql'
+#>>>>>>> f6daf44454995df5315180d8e7726bd4f6a8a30a
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,10 +42,17 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 
+#<<<<<<< HEAD
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+#=======
+#group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  #gem 'sdoc', :require => false
+#end
+#>>>>>>> f6daf44454995df5315180d8e7726bd4f6a8a30a
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

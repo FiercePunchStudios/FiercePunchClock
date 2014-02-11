@@ -1,0 +1,34 @@
+@import 'generics';
+
+// Color constants
+$prim_color:	#B0E0E6;
+$reading_color:	white;
+//$rim_bgc:	
+$shadow_color:	#334466;
+
+// Spacing constants
+$page_size:		40em;
+$margin_size:	1em;
+$half_size:		$margin_size / 2;
+$quart_size:	$margin_size / 4;
+
+// other constants
+// cssfontstack.com is handy for grouping similar fonts across platforms.
+//$web_fonts:	Helvetica, Arial, "Lucida Grande", sans-serif;
+$h_fonts:	"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$p_fonts:	Frutiger, "Segoe UI", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ui_fonts:	Frutiger, "Segoe UI", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// base classes
+.block {
+	position: relative;
+	display: block;
+	padding: $half_size $margin_size;
+	margin: $half_size $margin_size;
+	//border: solid black 1px;
+}
+.box {
+	@extend .block;
+	@include rounded($margin_size);
+	@include shadow($quart_size $half_size $quart_size $shadow_color);
+}

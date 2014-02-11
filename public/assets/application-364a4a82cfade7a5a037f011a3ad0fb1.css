@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+.floatfix {
+  overflow: auto; }
+
+.block, .box {
+  padding: 0.5em 1em;
+  margin: 0.5em 1em;
+  border: solid black 1px; }
+
+.box {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  -moz-box-shadow: 1em, 1em, 0.5em, #334466;
+  -webkit-box-shadow: 1em, 1em, 0.5em, #334466;
+  box-shadow: 1em, 1em, 0.5em, #334466; }
+.floatfix {
+  overflow: auto; }
+.floatfix, #header {
+  overflow: auto; }
+
+.block, .box, #content, #header, #footer {
+  padding: 0.5em 1em;
+  margin: 0.5em 1em;
+  border: solid black 1px; }
+
+.box, #content {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  -moz-box-shadow: 1em, 1em, 0.5em, #334466;
+  -webkit-box-shadow: 1em, 1em, 0.5em, #334466;
+  box-shadow: 1em, 1em, 0.5em, #334466; }
+
+.floatfix, #header {
+  overflow: auto; }
+
+body {
+  font-family: Frutiger, "Segoe UI", "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: powderblue;
+  padding: 1em; }
+
+h1, h2, h3, h4 {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+
+#header {
+  margin: 0em; }
+
+#content {
+  background-color: white;
+  margin: 0em; }
+
+#footer {
+  margin: 0em; }
+.devise {
+  position: absolute;
+  right: 0;
+  bottom: 0; }

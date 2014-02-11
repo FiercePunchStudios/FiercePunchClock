@@ -1,0 +1,11 @@
+@import 'constants';
+
+.devise {
+	//@extend .block;
+	margin: 0em;
+	padding: 0em;
+	//float: right;
+	position: absolute;
+	bottom: $quart_size;
+	right: 0em;
+}

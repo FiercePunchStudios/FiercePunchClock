@@ -1,0 +1,28 @@
+// The Compass library contains sass mixins, but hostgator doesn't have the compass gem installed.
+// So we write our own mixins. 
+
+// Rule of thumb for when to use mixins vs extends
+// https://coderwall.com/p/7p7w2a
+// conclusion: mixins for parameters and math, extensions for everything else
+
+///////////////////////////////
+// generic classes
+.floatfix {	overflow: auto;	}	// hot damn, somebody fixed the float problem: http://www.quirksmode.org/css/clearing.html
+
+///////////////////////////////
+// mixins
+@mixin rounded($radius){
+	-webkit-border-radius:	$radius;
+	-moz-border-radius:		$radius;
+	-ms-border-radius:		$radius;
+	-o-border-radius:		$radius;
+	border-radius:			$radius;
+}
+
+@mixin shadow($values...){
+	-moz-box-shadow:	$values;
+	-webkit-box-shadow:	$values;
+	box-shadow:			$values;
+}
+
+
