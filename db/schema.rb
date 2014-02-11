@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140124024006) do
+ActiveRecord::Schema.define(version: 20140211041211) do
+
+  create_table "employers", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "membershipType"
+    t.string   "addr1"
+    t.string   "addr2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "members", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +44,26 @@ ActiveRecord::Schema.define(version: 20140124024006) do
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+
+  create_table "user_employers", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "employer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_employers", ["employer_id"], name: "index_user_employers_on_employer_id"
+  add_index "user_employers", ["user_id"], name: "index_user_employers_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "email"
+    t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["member_id"], name: "index_users_on_member_id"
 
 end
